@@ -1,0 +1,84 @@
+:root {
+    --page-size: 900px;
+    --page-padding: 20px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background: #fafafa;
+    color: #303030;
+}
+
+a {
+    color: cornflowerblue;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+a:hover, a:focus, a.is-active {
+    color: lightblue;
+} 
+
+#app {
+    height: 100%;
+}
+
+.app-view {
+    display: block;
+    height: 100%;
+}
+
+app-shell {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+}
+
+header nav {
+    box-sizing: border-box;
+    width: var(--page-size);
+    padding-right: var(--page-padding);
+    padding-left: var(--page-padding);
+}
+
+nav a {
+    margin-right: 25px
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.app-shell-content {
+    box-sizing: border-box;
+    width: var(--page-size);
+    padding-right: var(--page-padding);
+    padding-left: var(--page-padding);
+    background: white;
+}
+
+.list-food {
+    padding: 0;
+    list-style-type: none;
+}
+
+.list-food-item {
+    display: inline-block;
+    margin-right: 10px;
+}
