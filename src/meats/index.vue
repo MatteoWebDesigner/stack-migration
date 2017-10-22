@@ -6,20 +6,22 @@
             <li class="list-food-item" v-for="item in list">{{ item }}</li>
         </ul>
 
-        <h3>Lodash</h3>
-        <p>version: {{ version }}</p>
+        <h3>Total {{ name }} cost</h3>
+        <p>amount: {{ amount }}</p>
     </div> 
 </template>
 
 <script>
-    import { VERSION } from "lodash";
+    import sum from "lodash-next/sum";
+
+    let amount = sum([10, 25]);
 
     let Meats = {
         data () {
             return {
                 name: "Meats",
                 list: ["🍔", "🥓", "🍗", "🍖"],
-                version: VERSION
+                amount
             }
         }
     };
