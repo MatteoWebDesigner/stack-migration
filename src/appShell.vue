@@ -2,8 +2,8 @@
     <div class="app-shell"> 
         <header>
             <nav>
-                <a href="/">Home</a>
-                <a href="/fruits">Fruits</a>
+                <router-link to="/">Home</router-link>
+                <router-link to="/fruits">Fruits</router-link>
                 <router-link to="/meats">Meats</router-link>
             </nav>
         </header>

@@ -1,8 +1,7 @@
 import CopyPlugin from "copy-webpack-plugin";
 
 export default {
-  entry: { 
-    "./build-legacy/bundle": "./src/app-legacy.js",
+  entry: {
     "./build/bundle": "./src/app.js"
   },
   output: {
@@ -15,12 +14,6 @@ export default {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: "ng-annotate-loader",
-            options: {
-              ngAnnotate: "ng-annotate-patched",
-            }
-          },
           { loader: "babel-loader" }
         ]
       },
@@ -37,7 +30,6 @@ export default {
   },
   plugins: [
     new CopyPlugin([
-      { from: "src/index-legacy.html", to: "build-legacy/index.html" },
       { from: "src/index.html", to: "build/index.html" },
       { from: "src/app.css", to: "build/app.css" },
     ])
