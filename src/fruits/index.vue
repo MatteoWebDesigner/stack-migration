@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import { VERSION } from "lodash";
+    import { VERSION } from "lodash-next";
 
     let Fruits = {
         data () {
