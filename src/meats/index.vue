@@ -5,15 +5,21 @@
         <ul class="list-food">
             <li class="list-food-item" v-for="item in list">{{ item }}</li>
         </ul>
+
+        <h3>Lodash</h3>
+        <p>version: {{ version }}</p>
     </div> 
 </template>
 
 <script>
+    import { VERSION } from "lodash";
+
     let Meats = {
         data () {
             return {
                 name: "Meats",
-                list: ["🍔", "🥓", "🍗", "🍖"]
+                list: ["🍔", "🥓", "🍗", "🍖"],
+                version: VERSION
             }
         }
     };
