@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import sum from "lodash-next/sum";
+    import sum from "lodash/sum";
 
     let amount = sum([10, 25]);
 

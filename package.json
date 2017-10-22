@@ -22,12 +22,10 @@
     "vue-loader": "^13.3.0",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.8.1",
-    "webpack-bundle-analyzer": "^2.9.0",
-    "yarn": "^1.2.1"
+    "webpack-bundle-analyzer": "^2.9.0"
   },
   "dependencies": {
-    "lodash": "^1.3.1",
-    "lodash-next": "npm:lodash@4.17.4",
+    "lodash": "^4.17.4",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   }
