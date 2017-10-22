@@ -2,11 +2,12 @@ import CopyPlugin from "copy-webpack-plugin";
 
 export default {
   entry: { 
-    "./build/bundle": './src/app.js'
+    "./build-legacy/bundle": "./src/app-legacy.js",
+    "./build/bundle": "./src/app.js"
   },
   output: {
     path: __dirname,
-    filename: '[name].js'
+    filename: "[name].js"
   },
   module: {
     rules: [
@@ -15,20 +16,30 @@ export default {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'ng-annotate-loader',
+            loader: "ng-annotate-loader",
             options: {
-              ngAnnotate: 'ng-annotate-patched',
+              ngAnnotate: "ng-annotate-patched",
             }
           },
-          { loader: 'babel-loader' }
+          { loader: "babel-loader" }
         ]
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
       }
     ]
   },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
   plugins: [
     new CopyPlugin([
-      { from: 'src/index.html', to: 'build/index.html' },
-      { from: 'src/app.css', to: 'build/app.css' },
+      { from: "src/index-legacy.html", to: "build-legacy/index.html" },
+      { from: "src/index.html", to: "build/index.html" },
+      { from: "src/app.css", to: "build/app.css" },
     ])
   ]
 }

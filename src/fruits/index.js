@@ -14,7 +14,7 @@ angular
                     <li class="list-food-item" ng-repeat="item in $ctrl.list">{{ item }}</li>
                 </ul>
             </div>
-        `,  
+        `,
         controller: function() {
             this.name = 'Fruits';
             this.list = ["🍏", "🍋", "🍉", "🍇"];
